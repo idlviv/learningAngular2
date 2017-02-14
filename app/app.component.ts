@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
 
+const listTodo = [
+    'First',
+    'Second',
+    'Third'
+  ];
+
 @Component({
+    moduleId: module.id,
     selector: 'app',
-    template: '<h1>Angular 2Do</h1>'
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css']
 })
 
 export class AppComponent {
-
+    title = 'Hello Angular2';
+    listTodo = listTodo;
 }
