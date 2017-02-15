@@ -46,6 +46,12 @@ export class AppComponent {
   listTodo: Todo[] = listTodo;
   newTodoTitle: string = '';
 
+  create() {
+    let todo: Todo = new Todo (this.newTodoTitle);
+    this.listTodo.push(todo);
+    this.newTodoTitle = '';
+  }
+
   toggle(todo: Todo) {
     todo.completed = !todo.completed;
   }
@@ -58,9 +64,5 @@ export class AppComponent {
     }
   }
 
-  create(event: Event, titleInput: string) {
-    event.preventDefault();
-    let todo: Todo = new Todo (titleInput);
-    this.listTodo.push(todo);
-  }
+
 }
