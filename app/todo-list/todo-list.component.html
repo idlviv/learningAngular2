@@ -1,0 +1,3 @@
+<div class="todo-list" *ngIf="listTodo.length">
+    <todo-item *ngFor="let todo of listTodo" [todo]="todo" (delete)="delete($event)"></todo-item>
+</div>
