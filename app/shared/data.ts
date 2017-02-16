@@ -1,4 +1,4 @@
-export const listTodo = [
+export const todos = [
   {
     title: 'First',
     completed: false

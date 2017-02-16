@@ -12,9 +12,10 @@ import {Todo} from '../shared/todo';
 export class TodoItemComponent {
   @Input() todo: Todo; // Приймаэмо з tlc.h, воно доступне з іменем, що було в []
   @Output() delete = new EventEmitter(); // Вихідні дані - подія, екземпляр класу подій
+  @Output() toggle = new EventEmitter();
 
-  toggle() {
-    this.todo.completed = !this.todo.completed;
+  onToggle() {
+    this.toggle.emit(this.todo);
   }
   onDelete() {
     // OnDelete метод, що буде викликатися при натисненні кн Delete (имя onDelete щоб не конфдіктувало з існ. delete

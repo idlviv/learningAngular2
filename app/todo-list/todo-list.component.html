@@ -1,5 +1,6 @@
-<div class="todo-list" *ngIf="listTodo.length">
-    <todo-item *ngFor="let todo of listTodo" [todo]="todo" (delete)="delete($event)"></todo-item>
+<div class="todo-list" *ngIf="todos.length">
+    <todo-item *ngFor="let todo of todos" [todo]="todo" (delete)="delete($event)"
+    (toggle)="toggle($event)"></todo-item>
     <!--[todo] - визначили нову власт яка візьметься з ngFor ="todo" і передасться в tic.t-->
     <!--todo-item буде мати подію (delete), метод батьківького ел-та, що обробляє назвемо "delete($event)"-->
     <!--можна передати видаляємий обєкт ч/з EventEmitter delete($event) або-->
