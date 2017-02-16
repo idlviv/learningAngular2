@@ -3,6 +3,7 @@
         <h1>{{title}}</h1>
     </header>
     <main>
-        <todo-form></todo-form>
-        <todo-list></todo-list>
+        <todo-form (add)="create($event)"></todo-form>
+            <!--Прослуховування події add і виклик метода (з передачею значення введеного кор-чем) create($event)-->
+        <todo-list [listTodo]="listTodo"></todo-list>
     </main>

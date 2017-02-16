@@ -10,13 +10,16 @@ import {Todo} from '../shared/todo';
 })
 
 export class TodoItemComponent {
-  @Input() todo: Todo;
-  @Output() delete = new EventEmitter();
+  @Input() todo: Todo; // Приймаэмо з tlc.h, воно доступне з іменем, що було в []
+  @Output() delete = new EventEmitter(); // Вихідні дані - подія, екземпляр класу подій
 
   toggle() {
     this.todo.completed = !this.todo.completed;
   }
   onDelete() {
-    this.delete.emit(this.todo)
+    // OnDelete метод, що буде викликатися при натисненні кн Delete (имя onDelete щоб не конфдіктувало з існ. delete
+    this.delete.emit(this.todo);
+    // emit() метод, при виклику якого станеться подія
+    // як подію передаємо сам обєкт this.todo і він буде доступний як $event в tlc.h
   }
 }

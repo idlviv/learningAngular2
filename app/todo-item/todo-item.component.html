@@ -5,7 +5,11 @@
     </button>
     <span class="title">{{ todo.title }}</span>
     <div class="actions">
-        <button class="delete icon" (click)="onDelete()">f
+        <button class="delete icon" (click)="onDelete()">
+        <!--Тут видалити неможливо, оск доступу до масиву тут немає-->
+        <!--Потрібно сказати батьківському елементу що видалити-->
+        <!--Створимо тут подію і підпишемо батька не неї-->
+        <!--Т.т при кліку викликається внутр метод onDelete, що генерує подію, яка доступна для перехоплення батьком-->
             <i class="material-icons">delete</i>
         </button>
     </div>
