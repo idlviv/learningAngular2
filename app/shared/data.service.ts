@@ -4,14 +4,17 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const todos = [
       {
+        id: 1,
         title: 'First',
         completed: false
       },
       {
+        id: 2,
         title: 'Second',
         completed: true
       },
       {
+        id: 3,
         title: 'Third',
         completed: false
       },
