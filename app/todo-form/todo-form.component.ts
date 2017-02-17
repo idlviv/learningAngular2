@@ -12,8 +12,10 @@ import { TodoService } from '../shared/todo.service'
 export class TodoFormComponent {
   title: string = '';
 
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService) {
+  }
 
   onSubmit() {
     this.todoService.createTodo(this.title);
+  }
 }
